@@ -1,46 +1,23 @@
-# Astro Starter Kit: Basics
+# Javier Azua — Full Stack Web Developer
 
-```sh
-npm create astro@latest -- --template basics
-```
+Portfolio personal: quien soy, qué hago y con qué tecnologías trabajo.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## English
 
-Inside of your Astro project, you'll see the following folders and files:
+I'm **Javier Azua**, Full Stack Web Developer. This repository is the source of my portfolio site: a place to get to know my work and my approach to building for the web.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+The site is bilingual (English and Spanish), adapts to light and dark mode, and uses a modern, static-first stack that I enjoy working with.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+**Built with:** [Astro](https://astro.build), [Tailwind CSS](https://tailwindcss.com), TypeScript — fast, accessible, and easy to maintain.
 
-## 🧞 Commands
+---
 
-All commands are run from the root of the project, from a terminal:
+## Español
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Soy **Javier Azua**, desarrollador web Full Stack. Este repositorio es el código de mi sitio portfolio: un espacio para conocer mi trabajo y mi forma de construir para la web.
 
-## 👀 Want to learn more?
+El sitio es bilingüe (inglés y español), se adapta a modo claro y oscuro, y está hecho con un stack estático y moderno con el que me siento cómodo trabajando.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Hecho con:** [Astro](https://astro.build), [Tailwind CSS](https://tailwindcss.com), TypeScript — rápido, accesible y fácil de mantener.

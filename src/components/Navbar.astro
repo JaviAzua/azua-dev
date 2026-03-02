@@ -1,0 +1,25 @@
+---
+import { getTranslations } from "../i18n";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+
+const { lang } = Astro.props;
+const pathname = Astro.url.pathname;
+const t = getTranslations(lang);
+---
+
+<header style="padding: 1rem 1.5rem; border-bottom: 1px solid #eee; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+    <div>
+        <h1 class="font-primary text-2xl font-bold">JAVIER AZUA</h1>
+        <p>Full Stack Web Developer</p>
+    </div>
+    <nav aria-label="Main">
+      <a href={`/${lang}/`}>{t('nav.home')}</a>
+      <span style="margin: 0 0.5rem;">·</span>
+      <a href={`/${lang}/about/`}>{t('nav.about')}</a>
+    </nav>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+        <LanguageSwitcher currentLang={lang} pathname={pathname} />
+        <div class="scale-75"><ThemeToggle labelDark={t('theme.switchToDark')} labelLight={t('theme.switchToLight')} /></div>
+    </div>
+  </header>

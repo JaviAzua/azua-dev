@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí"
+  },
+  "theme": {
+    "switchToDark": "Cambiar a modo oscuro",
+    "switchToLight": "Cambiar a modo claro"
+  },
+  "home": {
+    "title": "Azua Dev Portfolio | Inicio",
+    "heading": "Hola Mundo",
+    "intro": "Esto es una prueba. Usa el selector de idioma de arriba para ver esta página en inglés."
+  },
+  "about": {
+    "title": "Azua Dev Portfolio | Sobre mí",
+    "heading": "Sobre mí",
+    "body": "Esta es la página sobre mí. Puedes sustituir esto por tu bio, habilidades y experiencia."
+  }
+}

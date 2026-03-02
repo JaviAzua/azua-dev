@@ -1,0 +1,36 @@
+---
+import { locales, type Locale } from '../i18n';
+
+const { currentLang, pathname } = Astro.props;
+
+const otherLocale = locales.find((l) => l !== currentLang) as Locale;
+const pathWithoutLang = pathname.replace(/^\/[^/]+/, '') || '/';
+const otherHref = `/${otherLocale}${pathWithoutLang}`;
+const labels: Record<Locale, string> = { en: 'EN', es: 'ES' };
+---
+
+<nav aria-label="Language switcher" class="language-switcher">
+  <span class="language-switcher__current" aria-current="true">{labels[currentLang]}</span>
+  <a href={otherHref} class="language-switcher__link" hreflang={otherLocale} lang={otherLocale}>
+    {labels[otherLocale]}
+  </a>
+</nav>
+
+<style>
+  .language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .language-switcher__current {
+    font-weight: 600;
+    color: var(--color-text, #333);
+  }
+  .language-switcher__link {
+    color: var(--color-muted, #666);
+    text-decoration: none;
+  }
+  .language-switcher__link:hover {
+    text-decoration: underline;
+  }
+</style>

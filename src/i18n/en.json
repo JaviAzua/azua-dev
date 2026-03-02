@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "theme": {
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
+  },
+  "home": {
+    "title": "Azua Dev Portfolio | Home",
+    "heading": "Hello World",
+    "intro": "This is a test. Use the language switcher above to see this page in Spanish."
+  },
+  "about": {
+    "title": "Azua Dev Portfolio | About",
+    "heading": "About",
+    "body": "This is the about page. You can replace this with your bio, skills, and experience."
+  }
+}

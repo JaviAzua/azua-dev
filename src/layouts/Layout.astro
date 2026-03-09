@@ -1,9 +1,10 @@
 ---
-import Head from '../components/Head.astro';
-import Navbar from '../components/Navbar.astro';
-import { type Locale } from '../i18n';
-import '../styles/global.css';
-import '@fontsource-variable/montserrat';
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+import Navbar from "../components/Navbar.astro";
+import { type Locale } from "../i18n";
+import "../styles/global.css";
+import "@fontsource-variable/montserrat";
 
 const { lang, title } = Astro.props as { lang: Locale; title: string };
 ---
@@ -11,13 +12,14 @@ const { lang, title } = Astro.props as { lang: Locale; title: string };
 <!doctype html>
 <html lang={lang}>
   <Head title={title} />
-  <body class="bg-bg text-text transition-colors duration-300">
+  <body
+    class="bg-bg text-text transition-colors duration-300 h-screen flex flex-col w-full"
+  >
     <Navbar lang={lang} />
-    <main style="padding: 1.5rem;">
+    <main class="grow">
       <slot />
-      <button class="bg-button hover:bg-button-hover p-4 text-button-text">BUTTON COLOR</button>
-      <p class="text-[#525252]">TEXTO SECUNDARIO</p>
     </main>
+    <Footer />
   </body>
 </html>
 <style>

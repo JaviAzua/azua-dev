@@ -1,7 +1,9 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About"
+    "logo": "Full Stack Web Developer",
+    "works": "Works",
+    "about": "About",
+    "contact": "Contact"
   },
   "theme": {
     "switchToDark": "Switch to dark mode",
@@ -16,5 +18,10 @@
     "title": "Azua Dev Portfolio | About",
     "heading": "About",
     "body": "This is the about page. You can replace this with your bio, skills, and experience."
+  },
+  "contact": {
+    "title": "Azua Dev Portfolio | Contact",
+    "heading": "Contact",
+    "body": "This is the contact page. You can replace this with your contact information."
   }
 }

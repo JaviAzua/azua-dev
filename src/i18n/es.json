@@ -1,7 +1,9 @@
 {
   "nav": {
-    "home": "Inicio",
-    "about": "Sobre mí"
+    "logo": "Desarrollador Web Full Stack",
+    "works": "Trabajos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
   },
   "theme": {
     "switchToDark": "Cambiar a modo oscuro",
@@ -16,5 +18,10 @@
     "title": "Azua Dev Portfolio | Sobre mí",
     "heading": "Sobre mí",
     "body": "Esta es la página sobre mí. Puedes sustituir esto por tu bio, habilidades y experiencia."
+  },
+  "contact": {
+    "title": "Azua Dev Portfolio | Contacto",
+    "heading": "Contacto",
+    "body": "Esta es la página de contacto. Puedes sustituir esto por tu información de contacto."
   }
 }

@@ -1,25 +1,62 @@
 ---
 import { getTranslations } from "../i18n";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
+import NavbarLink from "./navbar/NavbarLink.astro";
 import ThemeToggle from "./ThemeToggle.astro";
+import NavbarBurguerMenu from "./navbar/NavbarBurguerMenu.tsx";
 
 const { lang } = Astro.props;
 const pathname = Astro.url.pathname;
 const t = getTranslations(lang);
+
+const links = [
+  { href: `/${lang}/`, text: t("nav.works") },
+  { href: `/${lang}/about/`, text: t("nav.about") },
+  { href: `/${lang}/contact/`, text: t("nav.contact") },
+];
 ---
 
-<header style="padding: 1rem 1.5rem; border-bottom: 1px solid #eee; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
-    <div>
-        <h1 class="font-primary text-2xl font-bold">JAVIER AZUA</h1>
-        <p>Full Stack Web Developer</p>
-    </div>
-    <nav aria-label="Main">
-      <a href={`/${lang}/`}>{t('nav.home')}</a>
-      <span style="margin: 0 0.5rem;">·</span>
-      <a href={`/${lang}/about/`}>{t('nav.about')}</a>
-    </nav>
-    <div style="display: flex; align-items: center; gap: 1rem;">
+<header
+  class="flex justify-between md:justify-normal md:grid md:grid-cols-6 lg:grid-cols-12 max-w-[95%] mx-auto md:gap-4 py-5 w-full h-36 md:h-28 lg:h-20"
+>
+  <a
+    href={`/${lang}/`}
+    class="nav-logo md:col-span-2 lg:col-span-4 z-9999 relative"
+  >
+    <p
+      class="font-primary text-base md:text-lg lg:text-xl font-medium tracking-wider"
+    >
+      JAVIER AZUA
+    </p>
+    <p
+      class="font-primary text-[0.625rem] md:text-xs lg:text-sm uppercase tracking-wider"
+    >
+      {`<${t("nav.logo")} />`}
+    </p>
+  </a>
+  <div id="navbar-links" class="md:col-span-4 lg:col-span-8 hidden md:block">
+    <nav aria-label="Main" class="md:flex justify-between items-center">
+      {
+        links.map((link) => (
+          <NavbarLink
+            href={link.href}
+            text={link.text}
+            currentPathname={pathname}
+          />
+        ))
+      }
+      <div class="flex justify-center items-center gap-1 w-fit">
         <LanguageSwitcher currentLang={lang} pathname={pathname} />
-        <div class="scale-75"><ThemeToggle labelDark={t('theme.switchToDark')} labelLight={t('theme.switchToLight')} /></div>
-    </div>
-  </header>
+        <div class="scale-[0.6]">
+          <ThemeToggle
+            labelDark={t("theme.switchToDark")}
+            labelLight={t("theme.switchToLight")}
+          />
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div id="navbar-burguer-menu" class="md:hidden block">
+    <NavbarBurguerMenu client:only="react" />
+  </div>
+</header>

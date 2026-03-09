@@ -8,26 +8,45 @@
   /* Light mode (default) */
   --color-bg: #f8fafc;
   --color-text: #111827;
-
   --color-button: #0d9488;
   --color-button-hover: #0f766e;
   --color-button-text: #ffffff;
 }
 
-/* Tema oscuro: clase .dark en <html> (controlado por el toggle) */
 :root.dark {
-  --color-bg: #0B1215;
-  --color-text: #E6F1F2;
-  --color-button: #0D9488;
-  --color-button-hover: #14B8A6;
-  --color-button-text: #042F2E;
+  --color-bg: #0b1215;
+  --color-text: #e6f1f2;
+  --color-button: #0d9488;
+  --color-button-hover: #14b8a6;
+  --color-button-text: #042f2e;
 }
 
-/* Tema claro explícito: evita que prefers-color-scheme lo pise si el usuario eligió claro */
 :root.light {
   --color-bg: #f8fafc;
   --color-text: #111827;
   --color-button: #0d9488;
   --color-button-hover: #0f766e;
   --color-button-text: #ffffff;
+}
+
+.nav-open a.nav-logo {
+  transition: color 0.5s ease;
+  transition-delay: 0.3s;
+  color: var(--color-bg);
+}
+
+.burguer-menu-container {
+  opacity: 0;
+  background-color: var(--color-text);
+  transition: opacity 0.5s ease;
+}
+
+.nav-open .burguer-menu-container {
+  opacity: 1;
+}
+
+.nav-open .burguer-menu-button-text {
+  transition: color 0.5s ease;
+  transition-delay: 0.1s;
+  color: var(--color-bg);
 }

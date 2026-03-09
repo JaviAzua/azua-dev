@@ -1,0 +1,26 @@
+---
+const { href, text, currentPathname } = Astro.props;
+
+const normalize = (path: string) => path.replace(/\/$/, "") || "/";
+const isActive =
+  currentPathname !== undefined &&
+  normalize(currentPathname) === normalize(href);
+
+const bracketClass = isActive ? "opacity-100" : "opacity-0";
+---
+
+<a
+  class="font-primary text-xs md:text-sm uppercase tracking-wider inline-flex items-baseline w-full"
+  href={href}
+>
+  <span class={`transition-opacity ${bracketClass}`} aria-hidden="true"
+    >{`<`}</span
+  >
+  <span
+    class={`hover:font-semibold transition-all duration-300 ${isActive ? "font-semibold" : " font-normal"}`}
+    >{text}</span
+  >
+  <span class={`transition-opacity ${bracketClass}`} aria-hidden="true"
+    >{`\u00A0/>`}</span
+  >
+</a>
